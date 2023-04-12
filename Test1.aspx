@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test1.aspx.cs" Inherits="ArmiaTest.Test1" %>
-
+<%@ Register Src="CountDownTimer.ascx" TagName="CountDown" TagPrefix="uc1" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>Test #1</h1>
+            <uc1:CountDown runat="server" />  
             <hr/>
             <p>Here, the test will fail because the regex is incorrect, please fix the regex in the same way 
                 as demonstrated on the call. It should be a one line fix.
@@ -20,5 +21,6 @@
             <asp:Literal runat="server" id="lblOutput"></asp:Literal>
         </div>
     </form>
+       
 </body>
 </html>

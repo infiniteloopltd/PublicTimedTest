@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test3.aspx.cs" Inherits="ArmiaTest.Test3" %>
-
+<%@ Register Src="CountDownTimer.ascx" TagName="CountDown" TagPrefix="uc1" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>Test #3</h1>
+            <uc1:CountDown runat="server" />  
             <hr/>
             <p>Here, the test will fail because the request must come from a specific country (In this case France). 
                 The fix will be 1 line of code.

@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Test2.aspx.cs" Inherits="ArmiaTest.Test2" %>
-
+<%@ Register Src="CountDownTimer.ascx" TagName="CountDown" TagPrefix="uc1" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,6 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>Test #2</h1>
+            <uc1:CountDown runat="server" />  
             <hr/>
             <p>Here, the test will fail because there is a CSRF in the post data. The fix should be 4 lines of code (approx.)
             </p>
