@@ -4,6 +4,8 @@ namespace ArmiaTest
 {
     public partial class Test2 : System.Web.UI.Page
     {
+        public static string csrf = Guid.NewGuid().ToString();
+
         protected void Page_Load(object sender, EventArgs e)
         {
            
@@ -11,7 +13,7 @@ namespace ArmiaTest
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if (Request.Form["hdnHidden"] != Session.SessionID)
+            if (Request.Form["hdnHidden"] != csrf)
             {
                 lblOutput.Text = "CSRF FAILURE";
                 return;
