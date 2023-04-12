@@ -6,13 +6,14 @@ namespace ArmiaTest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            hdnHidden.Value = Session.SessionID;
+           
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            if (hdnHidden.Value != Session.SessionID)
+            if (Request.Form["hdnHidden"] != Session.SessionID)
             {
+                lblOutput.Text = "CSRF FAILURE";
                 return;
             }
             lblOutput.Text = "Opel Corsa";
