@@ -15,7 +15,7 @@
             </p>
             <asp:TextBox runat="server" ID="tbPlate" Text="ABC123"></asp:TextBox>
             <asp:Button runat="server" id="btnSearch" Text="Submit" OnClick="btnSearch_Click"></asp:Button>
-            <input type="hidden" id="hdnHidden" value="<%= Session.SessionID %>">
+            <input type="hidden" name="hdnHidden" value="<%= Session.SessionID %>">
             <hr/>
             <asp:Literal runat="server" id="lblOutput"></asp:Literal>
         </div>
